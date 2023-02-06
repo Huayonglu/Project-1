@@ -1,0 +1,27 @@
+
+
+
+Project 1 - Packages used: Alpaca, Pyfolio
+
+1. COLLECT DATA - Collect all price data for US stocks back to January 2000 from the Alpaca API. 
+
+
+
+2. CLEAN DATA - Change the price data to returns.
+
+
+3. DEFINE STRATEGY - We will use momentum as our primary trading strategy. Momentum is defined as the 12-month performance of the singular stocks. 
+
+
+THE STEPS OF FORMULATING THE CODE FOR THE STRATEGY:
+4. Every 6-months the algorithm looks at the the universe of stocks (1000 or so) and ranks them based on their 12-month performance (ones with the highest momentum). It then takes a long position in the top 10% stocks every 6 months to rebalance the portfolio.
+
+4a) Of the top 10% (100) stocks we take an equal-weight of each stock (1/n) 
+
+
+
+5. RUN THE PERFORMANCE ANALYSIS - Assess the portfolio statistics
+
+
+
+7. LOOK FORWARD ANALYSIS - Run a monte carlo simulation for the future going forward
