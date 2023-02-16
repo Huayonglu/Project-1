@@ -19,7 +19,7 @@ The momentum premium (the amount momentum strategies work over the market) is we
 4. Sort the values and find the top 100 best performing, each month
 5. Every month, rebalance the portfolio to the 100 best performing stocks (ranked by momentum) from the sorted data.
 
-6. Calculate monthly returns for the portfolio by matching the tickers each month on the portfolio to the tickers in the monthly returns dataframe.
+6. Calculate monthly returns for the portfolio by matching the tickers each month on the portfolio to the tickers in the monthly returns dataframe (Implement a base 0.5% Transaction cost for each monthly return).
 7. Collect S&P 500 Closing price data and calculate returns to use as a benchmark.
 9. Compare and visualize both investment returns
 10. Re-run the backtest with different parameters to maximise Sharpe Ratio (e.g. look-back period, concentration)
