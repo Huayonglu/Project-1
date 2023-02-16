@@ -2,7 +2,11 @@
 
 ## Background
 
-Beating the market has always been the final and sole goal of every investor who has diverted planning rather than following the stock market index tracking indices. In this project, we try to pursue our investment strategy on momentum trend to create a balance and unbiased portfolio. We use a mix of libraries, packages and API to provide us the most suitable data as well as organize the findings in a sophisticated and presentable method.    
+Beating the market has always been the final and sole goal of every investor who takes an active approach to investing, rather than following the stock market index tracking indices (passive). In this project, we try to pursue our investment strategy on cross-sectional momentum, to create a superior, robust and outperforming portfolio. We use a mix of libraries, packages and API to provide us the most suitable data as well as organize the findings in a sophisticated and presentable method.    
+
+#### Rationale
+The momentum premium (the amount momentum strategies work over the market) is well documenated in academia, and we look to test that on our universe of approximately 2500 NYSE listed stocks. One important feature of quantitative investment strategies is the economic rationale behind why it works (if it does), as otherwise people can be critical of potential data-mining or a 'black-box' approach with no intuition. The momentum factor generally is one that falls into the bucket of a 'behavioural anomly', as intuitively one can deduct that there is probably information in the trends of moving prices or fundamentals. For example, one of the most common behavioural reasonings is "investor herding", where investors tend to overreact to a trend and get overconfident about a particular asset, driving prices up even further than they should be (and vice versa with underreaction in selling a stock). 
+
 
 ## Base Strategy 
 
@@ -33,6 +37,17 @@ Beating the market has always been the final and sole goal of every investor who
 
 ## Screeshots of Findings
 
+-  **Key Stats**
+
+![Stat](Stats.png)
+
+Though the strategy witnessed strong volatility, the the risk-adjusted return (sharpe) of this strategy immensely outperformed the S&P 500 and almost yields twice as much returns on a cumulative basis over ~20 years.
+
+- **Performance Cumulative Returns**
+
+![Performance Cumulative Returns](Performance_Cumulative_Returns.png)
+
+
 - **Comparison Distribution of Returns** 
 
 ![Distribution](Distribution%20.png)
@@ -58,25 +73,18 @@ Two major drawdown occured during 2008 and 2020 where global financial crisis an
 
 Similar to other indication, our strategy pose extra risk and may not suitable for risk-averse investor
 
-- **Sharpe Ratio**
+- **What happens when you change some parameters in the model? - Sharpe Ratio**
 
 ![Sharpe Ratio](Sharpe_Ratio.png)
 
-This graph illustrates the outcome of how different a variety of lookbacks can influence the returns - it's best for us to stick with 12 months lookback.
+This graph illustrates the outcome of how different a variety of lookbacks, as well as concentration levels, can influence the returns. Taking a greater concentration in stocks reduces diversification but may increase your risk-adjusted return. In our case, it seems that 6 or 12 months is the best, but the added diversification that 100 stocks gives seems to be the better bet as there isn't a huge benefit for concentrating the portfolio more. Also, it's best for us to stick with 12 months lookback, as it provides the more robust results.
 
--  **Stats**
-
-![Stat](Stats.png)
-
-Though the strategy witnessed strong volatility, the returns of this strategy immensely outperform S&P 500 and almost become twice bigger in average.
 
 - **All Monthly Returns**
 
 ![All Monthly Returns](All_Monthly_Returns.png)
 
-- **Performance Cumulative Returns**
-
-![Performance Cumulative Returns](Performance_Cumulative_Returns.png)
+We have most months with positive returns, with a few major drawdowns during recessioniary environments.
 
 ## Member
 - Abigail
