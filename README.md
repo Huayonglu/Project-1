@@ -14,6 +14,7 @@ The momentum premium (the amount momentum strategies work over the market) is we
 2. Clean up dataframe e.g. remove nulls and transform the index - ultimately reduce the data in dataframe to usable stocks
 
 **Creating Momentum Scores:**
+
 3. Calculate 12-month return for each stock ticker
 4. Sort the values and find the top 100 best performing, each month
 5. Every month, rebalance the portfolio to the 100 best performing stocks (ranked by momentum) from the sorted data.
