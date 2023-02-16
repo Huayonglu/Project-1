@@ -10,14 +10,18 @@ The momentum premium (the amount momentum strategies work over the market) is we
 
 ## Base Strategy 
 
-1. Collect the closing prices of active stock in NYSE that can be dated back to 2002
-2. Clean up dataframe e.g. remove nulls and transform the index - ultimately reduce the data in dataframe
-3. Calculate annual return from each stock ticker
-4. Sort the values and find the top 100 best performing from each month 
-5. Build and reconstruct the monthly portfolio from the sorted data, then substract it by 0.5% of the monthly return as transactional cost 
-6. Similar to procedure above, grab the 12-month return of a comparable **benchmark** from 2002, which in our case we use S&P 500 or 500 largest trading US companies
-7. Compare and visualize both investment returns
-8. Backtest the strategy with different variables
+1. Collect the closing prices of active stock on the NYSE that can be dated back to 2002
+2. Clean up dataframe e.g. remove nulls and transform the index - ultimately reduce the data in dataframe to usable stocks
+
+**Creating Momentum Scores:**
+3. Calculate 12-month return for each stock ticker
+4. Sort the values and find the top 100 best performing, each month
+5. Every month, rebalance the portfolio to the 100 best performing stocks (ranked by momentum) from the sorted data.
+
+6. Calculate monthly returns for the portfolio by matching the tickers each month on the portfolio to the tickers in the monthly returns dataframe.
+7. Collect S&P 500 Closing price data and calculate returns to use as a benchmark.
+9. Compare and visualize both investment returns
+10. Re-run the backtest with different parameters to maximise Sharpe Ratio (e.g. look-back period, concentration)
 
 
 ## Technology Used
@@ -35,7 +39,8 @@ The momentum premium (the amount momentum strategies work over the market) is we
 12. sklearn.linear_model (regression analysis)
 13. statsmodel (regression analysis)
 
-## Screeshots of Findings
+
+## Findings
 
 -  **Key Stats**
 
